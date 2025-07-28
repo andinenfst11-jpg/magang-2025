@@ -16,7 +16,7 @@ https://bit.ly/4kSyxg1
 
 
 tipe_pegawai = ["Pilih Tipe Pegawai", "Pegawai Negeri Sipil (PNS)", "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)"]
-golongan_pegawai = ["Pilih Golongan",
+golongan_pegawai_negeri_sipil = ["Pilih Golongan",
                  "Golongan Ia",
                  "Golongan Ib",
                  "Golongan Ic",
@@ -34,6 +34,7 @@ golongan_pegawai = ["Pilih Golongan",
                  "Golongan IVc",
                  "Golongan IVd",
                  "Golongan IVe",
+golongan_pegawai_Pemerintah_dengan_Perjanjian_Kerja (PPPK)  = ["Pilih Golongan,
                  "Golongan I",
                  "Golongan II",
                  "Golongan III",
@@ -50,7 +51,8 @@ golongan_pegawai = ["Pilih Golongan",
                  "Golongan XIV",
                  "Golongan XV",
                  "Golongan XVI",
-                 "Golongan XVII"]
+                 "Golongan XVII"]                                              
+                                 
 masa_kerja = ["Pilih Masa Kerja", 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
                  
 
