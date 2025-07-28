@@ -7,58 +7,41 @@ st.set_page_config(
 
 st.success("""
 # Tools Cek Gaji Pokok ASN
-Tools untuk mengecek gaji pokok PNS berdasarkan peraturan yang tercantum dalam link ini : 
-https://bit.ly/410CHM3 
 
-PPPK berdasarkan peraturan yang tercantum dalam link ini :  
-https://bit.ly/4kSyxg1
+
 """)
 
+# Input: Tipe Pegawai
+tipe_pegawaii = st.selectbox(
+    "Masukkan Tipe Pegawai",
+    ("Pegawai Negeri Sipil (PNS)", "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)")
+)
 
-tipe_pegawai = ["Pilih Tipe Pegawai", "Pegawai Negeri Sipil (PNS)", "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)"]
-golongan_pegawai = ["Pilih Golongan",
-                 "Golongan Ia",
-                 "Golongan Ib",
-                 "Golongan Ic",
-                 "Golongan Id",
-                 "Golongan IIa",
-                 "Golongan IIb",
-                 "Golongan IIc",
-                 "Golongan IId",
-                 "Golongan IIIa",
-                 "Golongan IIIb",
-                 "Golongan IIIc",
-                 "Golongan IIId",
-                 "Golongan IVa",
-                 "Golongan IVb",
-                 "Golongan IVc",
-                 "Golongan IVd",
-                 "Golongan IVe",
-                 "Golongan I",
-                 "Golongan II",
-                 "Golongan III",
-                 "Golongan IV",
-                 "Golongan V",
-                 "Golongan VI",
-                 "Golongan VII",
-                 "Golongan VIII",
-                 "Golongan IX",
-                 "Golongan X",
-                 "Golongan XI",
-                 "Golongan XII",
-                 "Golongan XIII",
-                 "Golongan XIV",
-                 "Golongan XV",
-                 "Golongan XVI",
-                 "Golongan XVII"]                    
-                           
-                                 
-masa_kerja = ["Pilih Masa Kerja", 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33]
-                 
+# Input: Golongan berdasarkan tipe pegawai
+if tipe_pegawaii == "Pegawai Negeri Sipil (PNS)":
+    golongan_pegawaii = st.selectbox(
+        "Masukkan Golongan",
+        (
+            "Golongan Ia", "Golongan Ib", "Golongan Ic", "Golongan Id",
+            "Golongan IIa", "Golongan IIb", "Golongan IIc", "Golongan IId",
+            "Golongan IIIa", "Golongan IIIb", "Golongan IIIc", "Golongan IIId",
+            "Golongan IVa", "Golongan IVb", "Golongan IVc", "Golongan IVd", "Golongan IVe"
+        )
+    )
+elif tipe_pegawaii == "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)":
+    golongan_pegawaii = st.selectbox(
+        "Masukkan Golongan",
+        (
+            "Golongan I", "Golongan II", "Golongan III", "Golongan IV",
+            "Golongan V", "Golongan VI", "Golongan VII", "Golongan VIII",
+            "Golongan IX", "Golongan X", "Golongan XI", "Golongan XII",
+            "Golongan XIII", "Golongan XIV", "Golongan XV", "Golongan XVI", "Golongan XVII"
+        )
+    )
 
-tipe_pegawaii = st.selectbox('''Masukkan Tipe Pegawai''', tipe_pegawai)
-golongan_pegawaii = st.selectbox('''Masukkan Golongan''', golongan_pegawai)
-masa_kerjaa = st.selectbox('''Masukkan Masa Kerja (Dalam Tahun)''',masa_kerja)
+# Pilihan masa kerja tetap
+masa_kerja = ["Pilih Masa Kerja"] + list(range(0, 34))
+masa_kerjaa = st.selectbox("Masukkan Masa Kerja (Dalam Tahun)", masa_kerja)
 
 # Golongan Ia
 if tipe_pegawaii == "Pegawai Negeri Sipil (PNS)" and golongan_pegawaii == "Golongan Ia" and 0 <= masa_kerjaa <= 1:
@@ -1741,4 +1724,6 @@ elif tipe_pegawaii == "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)" and go
 
 elif tipe_pegawaii == "Pegawai Pemerintah dengan Perjanjian Kerja (PPPK)" and golongan_pegawaii == "Golongan XVII" and 32 <= masa_kerjaa <= 32:
   st.warning ("Gaji Pokoknya adalah 7.329.000")
+
+
 
