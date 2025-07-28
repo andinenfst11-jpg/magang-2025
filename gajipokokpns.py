@@ -7,7 +7,10 @@ st.set_page_config(
 
 st.success("""
 # Tools Cek Gaji Pokok ASN
-tools untuk mengecek gaji pokok PNS berdasarkan peraturan yang tercantum dalam link ini : https://bit.ly/410CHM3 dan PPPK berdasarkan peraturan yang tercantum dalam link ini :  https://bit.ly/4kSyxg1
+tools untuk mengecek gaji pokok PNS berdasarkan peraturan yang tercantum dalam link ini : 
+https://bit.ly/410CHM3 
+dan PPPK berdasarkan peraturan yang tercantum dalam link ini :  
+https://bit.ly/4kSyxg1
 """)
 
 
